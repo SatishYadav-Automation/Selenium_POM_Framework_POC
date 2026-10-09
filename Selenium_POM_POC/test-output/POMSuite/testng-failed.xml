@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [POMSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="tests" name="ForgotPasswordTests All(failed)">
+    <classes>
+      <class name="Tests.ForgotPasswordTests">
+        <methods>
+          <include name="verifyForgotPassword"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Tests.ForgotPasswordTests -->
+    </classes>
+  </test> <!-- ForgotPasswordTests All(failed) -->
+  <test thread-count="3" parallel="tests" name="Smoke Tests(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="Tests.LoginTests">
+        <methods>
+          <include name="ValidLogin"/>
+          <include name="OpenLoginPage"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Tests.LoginTests -->
+    </classes>
+  </test> <!-- Smoke Tests(failed) -->
+</suite> <!-- Failed suite [POMSuite] -->

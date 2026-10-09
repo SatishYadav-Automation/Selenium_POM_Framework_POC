@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="POMSuite" parallel="tests" thread-count="3">
+
+    <!-- Run only Smoke tests from LoginTests -->
+    <test name="Smoke Tests">
+        <groups>
+            <run>
+                <include name="Smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Tests.LoginTests" />
+        </classes>
+    </test>
+
+    <!-- Run all tests from ForgotPasswordTests class -->
+    <test name="ForgotPasswordTests All">
+        <classes>
+            <class name="Tests.ForgotPasswordTests" />
+        </classes>
+    </test>
+
+</suite>
